@@ -9,19 +9,19 @@
 #ifndef FileController_hpp
 #define FileController_hpp
 
-#include "Data/CrimeData.hpp"
+#include "../Data/CrimeData.hpp"    //the ../ tells the command line to go UP to the previous folder and THEN into the data folder
 #include <string>
-#include <fstream>
-#include <iostream>
+#include <fstream>      //how we deal with files
+#include <iostream>     //dealing with inputs and outputs
 #include <vector>
-#include <sstream>
+#include <sstream>      //deals with strings as a stream
 
 using namespace std;
 
 class FileController
 {
 public:
-    static vector<CrimeData> readCrimeDataToVector(string filename);
+    static vector<CrimeData> readCrimeDataToVector(string filename);    //static method doesn't need an instance
 };
 
 #endif /* FileController_hpp */
