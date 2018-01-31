@@ -63,7 +63,6 @@
 		ACE071DF2022434300951D0C /* DataStructureProject */ = {
 			isa = PBXGroup;
 			children = (
-				ACE071EE202246B100951D0C /* Tools */,
 				ACE071EB202243DB00951D0C /* Runner.cpp */,
 				ACE071EA202243B500951D0C /* Controller */,
 			);
@@ -73,6 +72,7 @@
 		ACE071EA202243B500951D0C /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				ACE071EE202246B100951D0C /* Tools */,
 				ACE071E7202243AE00951D0C /* Controller.cpp */,
 				ACE071E8202243AE00951D0C /* Controller.hpp */,
 			);
