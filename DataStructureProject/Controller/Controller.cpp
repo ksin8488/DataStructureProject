@@ -18,13 +18,18 @@ void Controller :: start()
     codeTimer.stopTimer();
     codeTimer.displayInformation();
     codeTimer.resetTimer();
-    
     codeTimer.startTimer();
-    for(int index = 0; index < 500; index++)
+   
+    vector<CrimeData> myData = FileController :: readCrimeDataToVector("/Users/ksin8488/SwiftProjectsPM/DataStructureProject/DataStructureProject/Data/crime.csv"); //"" contains Absolute file path
+    
+    for(int i = 200; i <= 215; i++)
     {
-        cout << "Index is " << index << "\t";   // \t is the tab operator
+        cout << i << " is " << myData[i] << endl;
     }
+    
     codeTimer.stopTimer();
     codeTimer.displayInformation();
+    
+    
 }
 

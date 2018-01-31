@@ -12,6 +12,7 @@
 #include <iostream>
 #include <vector>
 #include "Tools/Timer.hpp"  //Need to give the file directory
+#include "FileController.hpp"
 
 class Controller
 {
