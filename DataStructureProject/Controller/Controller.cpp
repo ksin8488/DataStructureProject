@@ -44,11 +44,11 @@ void Controller :: findMaxAndMin()
     
     for(int index = 1; index < myData.size(); index++)
     {
-        if(myData[minIndex] > myData[index])
+        if(myData[minIndex] > myData[index])    //linear data comparison for finding the min
         {
             minIndex = index;
         }
-        if(myData[maxIndex] < myData[index])
+        else if(myData[maxIndex] < myData[index])
         {
             maxIndex = index;
         }
