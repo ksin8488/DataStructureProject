@@ -72,7 +72,6 @@
 			isa = PBXGroup;
 			children = (
 				ACE071DF2022434300951D0C /* DataStructureProject */,
-				ACE071EB202243DB00951D0C /* Runner.cpp */,
 				ACE071DE2022434300951D0C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -88,6 +87,7 @@
 		ACE071DF2022434300951D0C /* DataStructureProject */ = {
 			isa = PBXGroup;
 			children = (
+				ACE071EB202243DB00951D0C /* Runner.cpp */,
 				AC314CCF2024ED4A004071A8 /* Model */,
 				ACE071F520224D9D00951D0C /* Data */,
 				ACE071EA202243B500951D0C /* Controller */,
