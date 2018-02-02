@@ -22,6 +22,7 @@ class FileController
 {
 public:
     static vector<CrimeData> readCrimeDataToVector(string filename);    //static method doesn't need an instance
+
 };
 
 #endif /* FileController_hpp */
