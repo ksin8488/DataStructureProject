@@ -63,6 +63,11 @@ void Controller :: findMaxAndMin()
 
 void Controller :: testArray()
 {
+    Array<int> kashishArray(45);
     
+    kashishArray[0] = 123;
+    kashishArray.setAtIndex(0, 321);
+    
+    cout << kashishArray[0] << endl;
 }
 
