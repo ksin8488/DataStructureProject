@@ -9,7 +9,7 @@
 #ifndef Array_h
 #define Array_h
 
-#includes <assert.h>    //Used for validating user supplied data
+#include <assert.h>    //Used for validating user supplied data
 #include <iostream>     //Used for tracing and debug statements
 
 using namespace std;    //Used for keyword access
@@ -30,13 +30,13 @@ public:
     ~Array<Type>();
     
     //Operators
-    Array<Type> & operator = ()const Array<Type> & toReplace);
+    Array<Type> & operator = (const Array<Type> & toReplace);
     Type& operator [] (int index);
     Type operator [] (int index) const;
     
     //Methods
     int getSize() const;
-    Type get FromIndex(int index);
+    Type getFromIndex(int index);
     void setAtIndex(int index, Type data);
 };
 
@@ -61,13 +61,15 @@ Array<Type> :: Array(const Array<Type> & toCopy)
     {
         internalArray[index] = toCopy[index];
     }
-    
+}
+
 template <class Type>
 Array<Type> :: ~Array()
 {
     delete [] internalArray;
 }
-    
+
+//Overloads
 template <class Type>
 Array<Type> & Array<Type> :: operator = (const Array<Type> & toAssign)
 {
@@ -77,26 +79,26 @@ Array<Type> & Array<Type> :: operator = (const Array<Type> & toAssign)
        {
            delete [] internalArray;
            size = toAssign.getSize();
-           internalArray = new Type [size];
+           internalArray = new Type [size]; //creates a new array of the needed size
        }
        
        for (int index = 0; index < size; index++)
        {
-           internalArray[index] = toAssign[index];
+           internalArray[index] = toAssign[index];  //fills the new array
        }
    }
     return *this;
 }
     
 template <class Type>
-    Type & Array<Type> :: operator [] (int index)
-    {
-        assert(index >= 0 && index < size);
-        return internalArray[index];
-    }
+Type & Array<Type> :: operator [] (int index)   //Type& lefthand side operator (of the equal sign) Because it returns a reference you can change the value. (Left hand of = sign)
+{
+    assert(index >= 0 && index < size); //checks if the int is betwwen the index and size
+    return internalArray[index];
+}
     
 template <class Type>
-Type Array<Type> :: operator [] (int index) const
+Type Array<Type> :: operator [] (int index) const   //Type is just the righthand part because it has no reference operator (Right hand of = sign -- copy)
 {
     assert(index >= 0 && index < size);
     return internalArray[index];
@@ -125,8 +127,6 @@ void Array<Type> :: setAtIndex(int pos, Type item)
     assert(pos >= 0 && pos < size);
     internalArray[pos] = item;
 }
-    
-    
-}
+
 
 #endif /* Array_h */

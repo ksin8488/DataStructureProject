@@ -19,18 +19,20 @@ void Controller :: start()
     codeTimer.displayInformation();
     codeTimer.resetTimer();
     codeTimer.startTimer();
-   
+
     vector<CrimeData> myData = FileController :: readCrimeDataToVector("/Users/ksin8488/SwiftProjectsPM/DataStructureProject/DataStructureProject/Data/crime.csv"); //"" contains Absolute file path
-    
+
     for(int i = 200; i <= 215; i++)
     {
         cout << i << " is " << myData[i] << endl;
     }
-    
+
     codeTimer.stopTimer();
     codeTimer.displayInformation();
     
     findMaxAndMin();
+    
+    testArray();
 }
 
 void Controller :: findMaxAndMin()
@@ -57,5 +59,10 @@ void Controller :: findMaxAndMin()
     cout << "The smalles Crime stat is at " << minIndex << " and it is: " << myData[minIndex] << endl;
     cout << "The largest Crime stat is at " << maxIndex << " and it is: " << myData[maxIndex] << endl;
     searchTimer.displayInformation();
+}
+
+void Controller :: testArray()
+{
+    
 }
 
