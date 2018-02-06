@@ -18,7 +18,7 @@ class ArrayTester
 {
 public:
     void testArrayUse();
-    void testAdvancedArrray();
+    void testAdvancedArray();
 };
 
 #endif /* ArrayTester_hpp */

@@ -13,6 +13,7 @@
 #include <vector>
 #include "Tools/Timer.hpp"  //Need to give the file directory
 #include "FileController.hpp"
+#include "../Testers/ArrayTester.hpp"
 #include "../Model/Structures/Array.hpp"
 
 class Controller

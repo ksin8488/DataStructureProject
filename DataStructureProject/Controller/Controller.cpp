@@ -33,6 +33,12 @@ void Controller :: start()
     findMaxAndMin();
     
     testArray();
+    
+    //Creates an instance of array tester so we can use the methods
+    ArrayTester myTest;
+    myTest.testArrayUse();
+    myTest.testAdvancedArray();
+    
 }
 
 void Controller :: findMaxAndMin()
