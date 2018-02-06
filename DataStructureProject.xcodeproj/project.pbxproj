@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AC275CE6202A33D10092EE8E /* ArrayTester.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC275CE4202A33D10092EE8E /* ArrayTester.cpp */; };
 		ACE071E9202243AE00951D0C /* Controller.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ACE071E7202243AE00951D0C /* Controller.cpp */; };
 		ACE071EC202243DB00951D0C /* Runner.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ACE071EB202243DB00951D0C /* Runner.cpp */; };
 		ACE071F1202246C900951D0C /* Timer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ACE071EF202246C900951D0C /* Timer.cpp */; };
@@ -27,6 +28,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		AC275CE4202A33D10092EE8E /* ArrayTester.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ArrayTester.cpp; sourceTree = "<group>"; };
+		AC275CE5202A33D10092EE8E /* ArrayTester.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ArrayTester.hpp; sourceTree = "<group>"; };
 		AC314CD22024EDBB004071A8 /* Array.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Array.hpp; sourceTree = "<group>"; };
 		ACE071DD2022434300951D0C /* DataStructureProject */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = DataStructureProject; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACE071E7202243AE00951D0C /* Controller.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Controller.cpp; sourceTree = "<group>"; };
@@ -52,6 +55,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AC275CE3202A33B90092EE8E /* Testers */ = {
+			isa = PBXGroup;
+			children = (
+				AC275CE4202A33D10092EE8E /* ArrayTester.cpp */,
+				AC275CE5202A33D10092EE8E /* ArrayTester.hpp */,
+			);
+			path = Testers;
+			sourceTree = "<group>";
+		};
 		AC314CCF2024ED4A004071A8 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -71,6 +83,7 @@
 		ACE071D42022434300951D0C = {
 			isa = PBXGroup;
 			children = (
+				AC275CE3202A33B90092EE8E /* Testers */,
 				ACE071DF2022434300951D0C /* DataStructureProject */,
 				ACE071DE2022434300951D0C /* Products */,
 			);
@@ -187,6 +200,7 @@
 				ACE071FE2022512100951D0C /* CrimeData.cpp in Sources */,
 				ACE071EC202243DB00951D0C /* Runner.cpp in Sources */,
 				ACE071E9202243AE00951D0C /* Controller.cpp in Sources */,
+				AC275CE6202A33D10092EE8E /* ArrayTester.cpp in Sources */,
 				ACE071F420224D5A00951D0C /* FileController.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
