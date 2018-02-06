@@ -30,6 +30,7 @@
 /* Begin PBXFileReference section */
 		AC275CE4202A33D10092EE8E /* ArrayTester.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ArrayTester.cpp; sourceTree = "<group>"; };
 		AC275CE5202A33D10092EE8E /* ArrayTester.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ArrayTester.hpp; sourceTree = "<group>"; };
+		AC275CE9202A49350092EE8E /* Node.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Node.h; sourceTree = "<group>"; };
 		AC314CD22024EDBB004071A8 /* Array.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Array.hpp; sourceTree = "<group>"; };
 		ACE071DD2022434300951D0C /* DataStructureProject */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = DataStructureProject; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACE071E7202243AE00951D0C /* Controller.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Controller.cpp; sourceTree = "<group>"; };
@@ -64,9 +65,18 @@
 			path = Testers;
 			sourceTree = "<group>";
 		};
+		AC275CE7202A49190092EE8E /* Nodes */ = {
+			isa = PBXGroup;
+			children = (
+				AC275CE9202A49350092EE8E /* Node.h */,
+			);
+			path = Nodes;
+			sourceTree = "<group>";
+		};
 		AC314CCF2024ED4A004071A8 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				AC275CE7202A49190092EE8E /* Nodes */,
 				AC314CD02024ED54004071A8 /* Structures */,
 			);
 			path = Model;
