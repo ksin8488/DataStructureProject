@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		AC275CE6202A33D10092EE8E /* ArrayTester.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC275CE4202A33D10092EE8E /* ArrayTester.cpp */; };
+		AC275CEB202A4B1A0092EE8E /* LinearNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC275CEA202A4B1A0092EE8E /* LinearNode.cpp */; };
 		ACE071E9202243AE00951D0C /* Controller.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ACE071E7202243AE00951D0C /* Controller.cpp */; };
 		ACE071EC202243DB00951D0C /* Runner.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ACE071EB202243DB00951D0C /* Runner.cpp */; };
 		ACE071F1202246C900951D0C /* Timer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ACE071EF202246C900951D0C /* Timer.cpp */; };
@@ -30,7 +31,8 @@
 /* Begin PBXFileReference section */
 		AC275CE4202A33D10092EE8E /* ArrayTester.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ArrayTester.cpp; sourceTree = "<group>"; };
 		AC275CE5202A33D10092EE8E /* ArrayTester.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ArrayTester.hpp; sourceTree = "<group>"; };
-		AC275CE9202A49350092EE8E /* Node.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Node.h; sourceTree = "<group>"; };
+		AC275CE9202A49350092EE8E /* Node.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Node.hpp; sourceTree = "<group>"; };
+		AC275CEA202A4B1A0092EE8E /* LinearNode.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = LinearNode.cpp; sourceTree = "<group>"; };
 		AC314CD22024EDBB004071A8 /* Array.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Array.hpp; sourceTree = "<group>"; };
 		ACE071DD2022434300951D0C /* DataStructureProject */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = DataStructureProject; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACE071E7202243AE00951D0C /* Controller.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Controller.cpp; sourceTree = "<group>"; };
@@ -68,7 +70,8 @@
 		AC275CE7202A49190092EE8E /* Nodes */ = {
 			isa = PBXGroup;
 			children = (
-				AC275CE9202A49350092EE8E /* Node.h */,
+				AC275CE9202A49350092EE8E /* Node.hpp */,
+				AC275CEA202A4B1A0092EE8E /* LinearNode.cpp */,
 			);
 			path = Nodes;
 			sourceTree = "<group>";
@@ -212,6 +215,7 @@
 				ACE071E9202243AE00951D0C /* Controller.cpp in Sources */,
 				AC275CE6202A33D10092EE8E /* ArrayTester.cpp in Sources */,
 				ACE071F420224D5A00951D0C /* FileController.cpp in Sources */,
+				AC275CEB202A4B1A0092EE8E /* LinearNode.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

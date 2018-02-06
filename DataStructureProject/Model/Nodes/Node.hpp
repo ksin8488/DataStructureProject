@@ -1,13 +1,13 @@
 //
-//  Node.h
+//  Node.hpp
 //  DataStructureProject
 //
 //  Created by Singh, Kashish on 2/6/18.
 //  Copyright © 2018 CTEC. All rights reserved.
 //
 
-#ifndef Node_h
-#define Node_h
+#ifndef Node_hpp
+#define Node_hpp
 
 template <class Type>
 class Node
@@ -48,4 +48,4 @@ Type Node<Type> :: getData()
     return data;
 }
 
-#endif /* Node_h */
+#endif /* Node_hpp */
