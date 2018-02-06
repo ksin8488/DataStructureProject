@@ -83,7 +83,6 @@
 		ACE071D42022434300951D0C = {
 			isa = PBXGroup;
 			children = (
-				AC275CE3202A33B90092EE8E /* Testers */,
 				ACE071DF2022434300951D0C /* DataStructureProject */,
 				ACE071DE2022434300951D0C /* Products */,
 			);
@@ -100,6 +99,7 @@
 		ACE071DF2022434300951D0C /* DataStructureProject */ = {
 			isa = PBXGroup;
 			children = (
+				AC275CE3202A33B90092EE8E /* Testers */,
 				ACE071EB202243DB00951D0C /* Runner.cpp */,
 				AC314CCF2024ED4A004071A8 /* Model */,
 				ACE071F520224D9D00951D0C /* Data */,
