@@ -43,16 +43,16 @@ public:
 template <class Type>
 Array<Type> :: Array(int size)
 {
-    assert(size> 0);
-    this -> size = size;
+    assert(size > 0);           //To make sure that you can't store a negative number or 0
+    this -> size = size;        //same as this.size in Java and self.size in Swift (Selector means it's related to pointers)
     
     internalArray = new Type[size];
 }
 
 template <class Type>
-Array<Type> :: Array(const Array<Type> & toCopy)
+Array<Type> :: Array(const Array<Type> & toCopy)    //Makes a copy of an array - const is used so you can't "hurt it" but still get the data
 {
-    this->size = toCopy.getSize();
+    this->size = toCopy.getSize();      //new pointer made to get the size with no assert needed due to previous check
     
     //Build Data Structure
     internalArray = new Type[size];
@@ -66,14 +66,15 @@ Array<Type> :: Array(const Array<Type> & toCopy)
 template <class Type>
 Array<Type> :: ~Array()
 {
-    delete [] internalArray;
+    //About to delete the structure
+    delete [] internalArray;    //THIS IS NOT CALLED BY YOU!!! NEVER CALL IT!
 }
 
 //Overloads
 template <class Type>
-Array<Type> & Array<Type> :: operator = (const Array<Type> & toAssign)
+Array<Type> & Array<Type> :: operator = (const Array<Type> & toAssign)      //Assignment operator is changed. Can't do this in Java. "Type Something operator" should make you read the section carefully
 {
-   if (&toAssign != this)
+   if (&toAssign != this)       //Make sure the addresses are not the same
    {
        if (size != toAssign.getSize())
        {
@@ -91,20 +92,21 @@ Array<Type> & Array<Type> :: operator = (const Array<Type> & toAssign)
 }
     
 template <class Type>
-Type & Array<Type> :: operator [] (int index)   //Type& lefthand side operator (of the equal sign) Because it returns a reference you can change the value. (Left hand of = sign)
+Type & Array<Type> :: operator [] (int index)   //(Left hand of = sign) Type& lefthand side operator (of the equal sign) Because it returns a reference you can change the value.
 {
     assert(index >= 0 && index < size); //checks if the int is betwwen the index and size
     return internalArray[index];
 }
     
 template <class Type>
-Type Array<Type> :: operator [] (int index) const   //Type is just the righthand part because it has no reference operator (Right hand of = sign -- copy)
+Type Array<Type> :: operator [] (int index) const   //(Right hand of = sign -- copy) Type is just the righthand part because it has no reference operator
 {
     assert(index >= 0 && index < size);
     return internalArray[index];
 }
     
 //Methods
+//#Basic getter
 template <class Type>
 int Array<Type> :: getSize() const
 {
