@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.2">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>190</x>
+      <y>160</y>
+      <w>480</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>Linear Node&lt;Type&gt;
+--
+- LinearNode&lt;Type&gt; * : next
+
+--
++ LinearNode() : constructor
++LinearNode(Type data) : constructor
++ LinearNode(Type data, LinearNode&lt;Type&gt; * next) : constructor
+
++ setNextNode(LinearNode&lt;Type&gt; *) : void
++ getNextNode() : LinearNode&lt;Type&gt; *</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>850</x>
+      <y>190</y>
+      <w>260</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>Node&lt;Type&gt;
+--
+#data : Type
+
+--
++Node() : constructor
++Node(Type data) : constructor
++getData() : Type
++setData(Tyype data) : void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>660</x>
+      <y>250</y>
+      <w>210</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>190.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>190</x>
+      <y>370</y>
+      <w>140</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>Key
+--
+Visibility | Symbol
+--
+public           +
+
+protected      #
+
+private          -</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>190</x>
+      <y>500</y>
+      <w>170</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>Class
+--
+Data members
+--
+Methods/Constructors</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
