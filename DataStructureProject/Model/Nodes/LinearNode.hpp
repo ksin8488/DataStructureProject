@@ -1,12 +1,14 @@
 //
-//  LinearNode.cpp
+//  LinearNode.hpp
 //  DataStructureProject
 //
-//  Created by Singh, Kashish on 2/6/18.
+//  Created by Singh, Kashish on 2/8/18.
 //  Copyright © 2018 CTEC. All rights reserved.
 //
 
-#include <iostream>
+#ifndef LinearNode_h
+#define LinearNode_h
+
 #include "Node.hpp"
 
 using namespace std;
@@ -66,3 +68,6 @@ LinearNode<Type> * LinearNode<Type> :: getNextNode()
 {
     return next;
 }
+
+
+#endif /* LinearNode_h */
