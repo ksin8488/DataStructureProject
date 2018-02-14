@@ -153,6 +153,44 @@ Type LinkedList<Type> :: remove(int index)
     return removedData;
 }
 
+//Extra method to solve the error with "vTable and referenced from..."
+template <class Type>
+Type LinkedList<Type> :: getFromIndex(int index)
+{
+    assert(index >= 0 && index < this->size);
+    
+    LinearNode<Type> * current = front;
+    LinearNode<Type> * nodeToGet = nullptr;
+    LinearNode<Type> * previous = nullptr;
+    
+    Type data;
+    
+    if(index == 0)
+    {
+        nodeToGet = front;
+    }
+    else
+    {
+        for(int position = 0; position < index; position++)
+        {
+            previous = current;
+            current = current->getNextNode();
+        }
+        
+        nodeToGet = current;
+        if(index == this->size-1)
+        {
+            end = previous;
+        }
+        else
+        {
+            current = nodeToGet->getNextNode();
+        }
+    }
+    data = nodeToGet->getData();
+    return data;
+}
+
 //#Basic methods
 template <class Type>
 LinearNode<Type> * LinkedList<Type> :: getEnd()

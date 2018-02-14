@@ -16,6 +16,8 @@ using namespace std;
 template <class Type>
 class LinearNode : public Node<Type>
 {
+protected:
+    LinearNode<Type> * next;
 public:
     //Constructors
     LinearNode();

@@ -17,9 +17,9 @@ void LinkedListTester :: testListBasics()
     cout << numbers.getFront()->getData() << " Is is at the front fo the list and shoudl be 9" << endl;
     cout << numbers.getEnd()->getData() << " Is at teh end of the list and should be 9" << endl;
     
-    numbers.add(0)
+    numbers.add(0);
     cout << numbers.getFront()->getData() << "Is is at the front of the list and should be 9" << endl;
-    cout << numbers.getEnbd()->getData() << " Is at the end of the list and should be 0" << endl;
+    cout << numbers.getEnd()->getData() << " Is at the end of the list and should be 0" << endl;
     
     numbers.addAtIndex(1,2);
     numbers.add(324);
@@ -41,19 +41,19 @@ void LinkedListTester :: testListBasics()
     cout  << numbers.getEnd()->getData() << " IS at the end of the list and should be 32567" << endl;
 }
 
-void LinkedListTEster :: testListWithData()
+void LinkedListTester :: testListWithData()
 {
     Timer listTimer;
     
     listTimer.startTimer();
-    LinkedLKist<CrimesData> crimes = FileController :: readDataToList("/Users/ksin8488/SwiftProjectsPM/DataStructureProject/DataStructureProject/Data/crime.csv");
+    LinkedList<CrimeData> crimes = FileController :: readDataToList("/Users/ksin8488/SwiftProjectsPM/DataStructureProject/DataStructureProject/Data/crime.csv");
     listTimer.stopTimer();
     cout << "This is how long it took to read the structure into our custom data structure" << endl;
     listTimer.displayInformation();
     
     listTimer.resetTimer();
     cout << "Here is how long it tkaes to access a random data value" << endl;
-    listTimer.startTImer();
+    listTimer.startTimer();
     int randomLocation = (rand() * rand()) % crimes.getSize();
     cout << "THe random index is " << randomLocation << endl;
     double totalViolentRate = crimes.getFromIndex(randomLocation).getAllViolentRates();
