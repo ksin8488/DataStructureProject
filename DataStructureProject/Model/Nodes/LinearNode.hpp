@@ -43,7 +43,7 @@ LinearNode<Type> :: LinearNode() : Node<Type>()
 template <class Type>
 LinearNode<Type> :: LinearNode(Type data) : Node<Type>(data)
 {
-    this->nex = nullptr;
+    this->next = nullptr;
 }
 
 /**

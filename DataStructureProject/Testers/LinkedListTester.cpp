@@ -1,26 +1,14 @@
 //
-//  LinkedListTesters.hpp
+//  LinkedListTester.cpp
 //  DataStructureProject
 //
 //  Created by Singh, Kashish on 2/14/18.
 //  Copyright © 2018 CTEC. All rights reserved.
 //
 
-#ifndef LinkedListTesters_h
-#define LinkedListTesters_h
+#include "LinkedListTester.hpp"
 
-#include "../Model/Structures/Linear/LinkedList.hpp"
-#include "../Controller/FileController.hpp"
-#include "../Controller/Tools/Timer.hpp"
-#include "../Data/CrimeData.hpp"
-#include <iostream>
-
-class LinkedListTester
-{
-public:
-    void testListBasics();
-    void testListWithData();
-};
+using namespace std;
 
 void LinkedListTester :: testListBasics()
 {
@@ -49,7 +37,7 @@ void LinkedListTester :: testListBasics()
     numbers.add(32567);
     numbers.addAtIndex(0,2312);
     
-    cout << numbers.getFront()->getData() << " Is is at teh front of the list and hsould be 2312" << endl;
+    cout << numbers.getFront()->getData() << " Is is at the front of the list and hsould be 2312" << endl;
     cout  << numbers.getEnd()->getData() << " IS at the end of the list and should be 32567" << endl;
 }
 
@@ -73,5 +61,3 @@ void LinkedListTEster :: testListWithData()
     cout << "THe random crime stat is: " << totalViolentRate << " , and here is the time" << endl;
     listTimer.displayInformation();
 }
-
-#endif /* LinkedListTesters_h */
