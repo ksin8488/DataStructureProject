@@ -39,6 +39,10 @@ void Controller :: start()
     myTest.testArrayUse();
     myTest.testAdvancedArray();
     
+    LinkedListTester listTest;
+    listTest.testListBasics();
+    listTest.testListWithData();
+    
 }
 
 void Controller :: findMaxAndMin()

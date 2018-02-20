@@ -80,22 +80,22 @@ void LinkedList<Type> :: add(Type item)
 template <class Type>
 void LinkedList<Type> :: addAtIndex(int index, Type item)
 {
-    assert(index >= 0 && index <= this->size);
+    assert(index >= 0 && index <= this->size);  //checks if the index is valid
     if(index == this->size)
     {
-        add(item);
+        add(item);  //adds the item to the "this" position
     }
     else
     {
         LinearNode<Type> * toBeAdded = new LinearNode<Type>(item);
         if(index == 0)
         {
-            toBeAdded->setNextNode(front);
-            front = toBeAdded;
+            toBeAdded->setNextNode(front);  //sets the new value to the front
+            front = toBeAdded;      //changes front to now be the new value
         }
         else
         {
-            LinearNode<Type> * previous = nullptr;
+            LinearNode<Type> * previous = nullptr;      //makes the previous pointer a nullptr value
             LinearNode<Type> * current = front;
             for(int position = 0; position < index; position++)
             {
@@ -115,22 +115,22 @@ Type LinkedList<Type> :: remove(int index)
     assert(index >= 0 && index < this->size);
     
     LinearNode<Type> * current = front;
-    LinearNode<Type> * toBeRemoved = nullptr;
-    LinearNode<Type> * previous = nullptr;
+    LinearNode<Type> * toBeRemoved = nullptr;   //creates a pointer to be removed that is set to null
+    LinearNode<Type> * previous = nullptr;      //creates a pointer called previous that is set to null
     
     Type removedData;
     
     if(index == 0)
     {
-        toBeRemoved = front;
-        this->front = this->front->getNextNode();
+        toBeRemoved = front;    //sets the value of what needs to be removed to the front value
+        this->front = this->front->getNextNode();   //makes the front be the next pointer since the current one is no more
     }
     else
     {
         for(int position = 0; position < index; position++)
         {
-            previous = current;
-            current = current->getNextNode();
+            previous = current; //all previous nodes get shifted to become the current node in the loop
+            current = current->getNextNode();   //the new current is the value after the old current (next one)
         }
         
         toBeRemoved = current;

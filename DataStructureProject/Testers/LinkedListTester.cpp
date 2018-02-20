@@ -15,10 +15,10 @@ void LinkedListTester :: testListBasics()
     LinkedList<int> numbers;
     numbers.add(9);
     cout << numbers.getFront()->getData() << " Is is at the front fo the list and shoudl be 9" << endl;
-    cout << numbers.getEnd()->getData() << " Is at teh end of the list and should be 9" << endl;
+    cout << numbers.getEnd()->getData() << " Is at the end of the list and should be 9" << endl;
     
     numbers.add(0);
-    cout << numbers.getFront()->getData() << "Is is at the front of the list and should be 9" << endl;
+    cout << numbers.getFront()->getData() << " Is is at the front of the list and should be 9" << endl;
     cout << numbers.getEnd()->getData() << " Is at the end of the list and should be 0" << endl;
     
     numbers.addAtIndex(1,2);
@@ -27,7 +27,7 @@ void LinkedListTester :: testListBasics()
     cout << numbers.getFront()->getData() << " Is is at the front fo the list and should be 9" << endl;
     cout << numbers.getEnd()->getData() << " Is at the end of the llist and should be 324" << endl;
     
-    cout << "THis loop should print 4 lines" << endl;
+    cout << "This loop should print 4 lines" << endl;
     for(int index = 0; index < numbers.getSize(); index++)
     {
         cout << numbers.getFromIndex(index) << endl;
@@ -38,7 +38,7 @@ void LinkedListTester :: testListBasics()
     numbers.addAtIndex(0,2312);
     
     cout << numbers.getFront()->getData() << " Is is at the front of the list and hsould be 2312" << endl;
-    cout  << numbers.getEnd()->getData() << " IS at the end of the list and should be 32567" << endl;
+    cout  << numbers.getEnd()->getData() << " Is at the end of the list and should be 32567" << endl;
 }
 
 void LinkedListTester :: testListWithData()
