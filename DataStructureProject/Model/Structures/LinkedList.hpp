@@ -153,41 +153,59 @@ Type LinkedList<Type> :: remove(int index)
     return removedData;
 }
 
-//Extra method to solve the error with "vTable and referenced from..."
+////Extra method to solve the error with "vTable and referenced from..." - Code from Derek Vawdry
+//template <class Type>
+//Type LinkedList<Type> :: getFromIndex(int index)
+//{
+//    assert(index >= 0 && index < this->size);
+//
+//    LinearNode<Type> * current = front;
+//    LinearNode<Type> * nodeToGet = nullptr;
+//    LinearNode<Type> * previous = nullptr;
+//
+//    Type data;
+//
+//    if(index == 0)
+//    {
+//        nodeToGet = front;
+//    }
+//    else
+//    {
+//        for(int position = 0; position < index; position++)
+//        {
+//            previous = current;
+//            current = current->getNextNode();
+//        }
+//
+//        nodeToGet = current;
+//        if(index == this->size-1)
+//        {
+//            end = previous;
+//        }
+//        else
+//        {
+//            current = nodeToGet->getNextNode();
+//        }
+//    }
+//    data = nodeToGet->getData();
+//    return data;
+//}
+
 template <class Type>
 Type LinkedList<Type> :: getFromIndex(int index)
 {
     assert(index >= 0 && index < this->size);
-    
-    LinearNode<Type> * current = front;
-    LinearNode<Type> * nodeToGet = nullptr;
-    LinearNode<Type> * previous = nullptr;
-    
     Type data;
     
-    if(index == 0)
+    LinearNode<Type> * current = front;
+    
+    for(int position = 0; position < index; position++)
     {
-        nodeToGet = front;
+        current = current->getNextNode();
     }
-    else
-    {
-        for(int position = 0; position < index; position++)
-        {
-            previous = current;
-            current = current->getNextNode();
-        }
-        
-        nodeToGet = current;
-        if(index == this->size-1)
-        {
-            end = previous;
-        }
-        else
-        {
-            current = nodeToGet->getNextNode();
-        }
-    }
-    data = nodeToGet->getData();
+    
+    data = current->getData();
+    
     return data;
 }
 
