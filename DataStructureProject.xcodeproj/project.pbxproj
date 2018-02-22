@@ -29,6 +29,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		AC03FE68203F4B6C00526C1E /* Stack.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Stack.hpp; sourceTree = "<group>"; };
+		AC03FE69203F4B7700526C1E /* Queue.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Queue.hpp; sourceTree = "<group>"; };
 		AC275CE4202A33D10092EE8E /* ArrayTester.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ArrayTester.cpp; sourceTree = "<group>"; };
 		AC275CE5202A33D10092EE8E /* ArrayTester.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ArrayTester.hpp; sourceTree = "<group>"; };
 		AC275CE9202A49350092EE8E /* Node.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Node.hpp; sourceTree = "<group>"; };
@@ -62,6 +64,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AC03FE67203F49E200526C1E /* Linear */ = {
+			isa = PBXGroup;
+			children = (
+				AC314CD22024EDBB004071A8 /* Array.hpp */,
+				ACBCD700202CE1A0003535B4 /* List.hpp */,
+				AC98667E2034B9AD00626AAD /* LinkedList.hpp */,
+				AC03FE68203F4B6C00526C1E /* Stack.hpp */,
+				AC03FE69203F4B7700526C1E /* Queue.hpp */,
+			);
+			path = Linear;
+			sourceTree = "<group>";
+		};
 		AC275CE3202A33B90092EE8E /* Testers */ = {
 			isa = PBXGroup;
 			children = (
@@ -85,8 +99,8 @@
 		AC314CCF2024ED4A004071A8 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				AC275CE7202A49190092EE8E /* Nodes */,
 				AC314CD02024ED54004071A8 /* Structures */,
+				AC275CE7202A49190092EE8E /* Nodes */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -94,9 +108,7 @@
 		AC314CD02024ED54004071A8 /* Structures */ = {
 			isa = PBXGroup;
 			children = (
-				AC314CD22024EDBB004071A8 /* Array.hpp */,
-				ACBCD700202CE1A0003535B4 /* List.hpp */,
-				AC98667E2034B9AD00626AAD /* LinkedList.hpp */,
+				AC03FE67203F49E200526C1E /* Linear */,
 			);
 			path = Structures;
 			sourceTree = "<group>";

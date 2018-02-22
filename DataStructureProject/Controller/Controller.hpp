@@ -14,9 +14,9 @@
 #include "Tools/Timer.hpp"  //Need to give the file directory
 #include "FileController.hpp"
 #include "../Testers/ArrayTester.hpp"
-#include "../Model/Structures/Array.hpp"
+#include "../Model/Structures/Linear/Array.hpp"
 #include "../Testers/LinkedListTester.hpp"
-#include "../Model/Structures/List.hpp"
+#include "../Model/Structures/Linear/List.hpp"
 
 class Controller
 {

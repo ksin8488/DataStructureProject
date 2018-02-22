@@ -10,7 +10,7 @@
 #define ArrayTester_hpp
 
 #include <iostream>
-#include "../Model/Structures/Array.hpp"    //Only 2 Dots! It is the command line sequence to the directory above
+#include "../Model/Structures/Linear/Array.hpp"    //Only 2 Dots! It is the command line sequence to the directory above
 #include "../Controller/FileController.hpp"
 #include "../Controller/Tools/Timer.hpp"
 
