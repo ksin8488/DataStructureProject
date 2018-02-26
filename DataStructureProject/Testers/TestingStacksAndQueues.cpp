@@ -7,3 +7,20 @@
 //
 
 #include "TestingStacksAndQueues.hpp"
+
+void TestingStacksAndQueues :: stackVersusList()
+{
+    Stack<int> numberStack;
+    LinkedList<int> numberList;
+    Timer stackTimer, listTimer;
+}
+
+void TestingStacksAndQueues :: stackVersusQueue()
+{
+    
+}
+
+void TestingStacksAndQueues :: queueVersusList()
+{
+    
+}

@@ -30,12 +30,12 @@ public:
     //Oveerrridden LinkedList methods
     void add(Type data);
     void addAtIndex(int index, Type data);
-    Type gettFromIndex(int index);
+    Type getFromIndex(int index);
     Type remove(int index);
 };
 
 template <class Type>
-Queue<Type> :: Queue() : LinkedList<Type()
+Queue<Type> :: Queue() : LinkedList<Type>()
 {
     //Empty since it is handled by the parent class constructor
 }
@@ -75,7 +75,7 @@ void Queue<Type> :: add(Type item)
 }
 
 template <class Type>
-Type Queue<Tyoe> :: dequeue()
+Type Queue<Type> :: dequeue()
 {
     assert(this->size > 0);
     
@@ -94,7 +94,7 @@ Type Queue<Tyoe> :: dequeue()
 template <class Type>
 Type Queue<Type> :: remove(int index)
 {
-    asseert9index == 0);
+    assert (index == 0);
     return dequeue();
 }
 
@@ -115,7 +115,7 @@ Type Queue<Type> :: peek()
 }
 
 template <class Type>
-Type Queue<Type> :: getFromIndedx(int index)
+Type Queue<Type> :: getFromIndex(int index)
 {
     assert(index == 0);
     return peek();
