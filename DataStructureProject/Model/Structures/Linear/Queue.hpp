@@ -32,7 +32,7 @@ public:
     void addAtIndex(int index, Type data);
     Type gettFromIndex(int index);
     Type remove(int index);
-}
+};
 
 template <class Type>
 Queue<Type> :: Queue() : LinkedList<Type()
