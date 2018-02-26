@@ -15,6 +15,7 @@
 #include "../Model/Structures/Linear/Stack.hpp"
 #include "../Model/Structures/Linear/List.hpp"
 
+
 #include <iostream>
 
 using namespace std;

@@ -69,6 +69,13 @@ void Queue<Type> :: enqueue(Type item)
 }
 
 template <class Type>
+void Queue<Type> :: addAtIndex(int index, Type item)
+{
+    assert(index == this->size -1);
+    enqueue(item);
+}
+
+template <class Type>
 void Queue<Type> :: add(Type item)
 {
     enqueue(item);
@@ -111,7 +118,7 @@ template <class Type>
 Type Queue<Type> :: peek()
 {
     assert(this->size > 0);
-    return this->getfront()->getData();
+    return this->getFront()->getData();
 }
 
 template <class Type>
