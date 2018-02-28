@@ -29,22 +29,25 @@ public:
     Type remove(int index);
     Type getFromIndex(int index);
     int getSize() const;
+    //Unused
+    LinearNode<Type>* getFront();
+    LinearNode<Type>* getEnd();
 };
 
+//Constructor and deconstructor
 template <class Type>
 CircularList<Type> :: CircularList()
 {
-    front->setPrevious(end);
-    front->setNext(end);
-    
-    end->setPrevious(front);
-    end->setNext(front);
+    front = nullptr;
+    end = nullptr;
+    this->size = 0;
 }
 
 template <class Type>
+CircularList<Type> :: ~CircularList();
 {
-    CircularList<Type> * current = front;
-    while (this->front != nullptr)
+    DoubleNode<Type> * current = front;
+    whille(this->front != nullptr)
     {
         front = front->getNext();
         delete current;
@@ -52,15 +55,16 @@ template <class Type>
     }
 }
 
+//findNode method looks from the closest index that we have access to (front or end)
 template <class Type>
-DoubleNode<Type> * CircularList<Type> :: findNode(int index)
+DoubleNode<Type * CircularList<Type> :: findNode(int index)
 {
     assert (index >= 0 && index < this->size);
-    DoubleNode<Type> * nodetoFind;
+    DoubleNode<Type> * nodeToFind;
     
     if(index < this->size / 2)
     {
-        nodeToFind = this->end;
+        nodeToFind = this->front;
         for(int position = 0; position < index; position++)
         {
             nodeToFind = nodeToFind->getNext();
@@ -68,8 +72,8 @@ DoubleNode<Type> * CircularList<Type> :: findNode(int index)
     }
     else
     {
-        nodeToFind = this->end;
-        for(int position = this->size -1; position > index; position--)
+        nodeToFind = this->size;
+        for(int position = this->size - 1; position > index; position--)
         {
             nodeToFind = nodeToFind->getPrevious();
         }
@@ -78,7 +82,7 @@ DoubleNode<Type> * CircularList<Type> :: findNode(int index)
     return nodeToFind;
 }
 
-//Works similar to the LinkedList but with a smaller pointer addition
+//add method works similar to a regular LinkedList but with a small pointer addition
 template <class Type>
 void CircularList<Type> :: add(Type item)
 {
@@ -90,14 +94,14 @@ void CircularList<Type> :: add(Type item)
     }
     else
     {
-        addedNode = new DoubleNode<Type>(iteml this->end, this->front);
+        addedNode = new DoubleNode<Type>(item, this->end, this->front);
         this->end->setNext(addedNode);
     }
     this->end = addedNode;
-    this->size++;
+    this->size++
 }
 
-//uses the findNode method
+//addAtIndex mehtod uses the findNodeMethod - assert is <= because it is okay to add to the end
 template <class Type>
 void CircularList<Type> :: addAtIndex(int index, Type item)
 {
@@ -105,14 +109,14 @@ void CircularList<Type> :: addAtIndex(int index, Type item)
     
     DoubleNode<Type> * next;
     DoubleNode<Type> * previous;
-    DoubleNode<Type> * addMe;
+    DoubleNode<Type>* addMe;
     
     if(index < this->size)
     {
         next = findNode(index);
         previous = next->getPrevious();
     }
-    else if(index == this->size)
+    else if (index == this->size)
     {
         next = this->front;
         previous = this->end;
@@ -126,7 +130,7 @@ void CircularList<Type> :: addAtIndex(int index, Type item)
     }
     else if(index == this->size)
     {
-        this->end = addMe;
+        this->end - addMe;
     }
     
     previous->setNext(addMe);
@@ -134,14 +138,16 @@ void CircularList<Type> :: addAtIndex(int index, Type item)
     this->size++;
 }
 
+//get method looks for the value and returns it and has an assert as usual for validity
 template <class Type>
 Type CircularList<Type> :: getFromIndex(int index)
 {
-    assert (index >= 0 && index < this->size);
+    assert(index >= 0 && index < this->size)
     DoubleNode<Type> * holder = findNode(index);
     return holder->getData();
 }
 
+//remove method that uses and changes multiple pointers
 template <class Type>
 Type CircularList<Type> :: remove(int index)
 {
@@ -171,10 +177,25 @@ Type CircularList<Type> :: remove(int index)
     return value;
 }
 
+//getSize method
 template <class Type>
 int CircularList<Type> :: getSize() const
 {
     return this->size;
 }
+
+//Extraneous Bad Design
+template <class Type>
+LinearNode<Type> * CircularList<Type> :: getFront()
+{
+    return nullptr;
+}
+
+template <class Type>
+LinearNode<Type> * CircularList<Type> :: getEnd()
+{
+    return nullptr;
+}
+
 
 #endif /* CircularList_h */
