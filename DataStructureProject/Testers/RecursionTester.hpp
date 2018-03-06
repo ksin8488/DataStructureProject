@@ -21,7 +21,7 @@ private:
     int fib(int start);
     string mystery(string word);
 public:
-    void testREcursionNumbers();
+    void testRecursionNumbers();
     void testRecursionString();
 };
 

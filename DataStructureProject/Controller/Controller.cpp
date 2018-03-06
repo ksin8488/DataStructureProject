@@ -43,6 +43,11 @@ void Controller :: start()
     listTest.testListBasics();
     listTest.testListWithData();
     
+    //RecursionTester
+    RecursionTester test;
+    test.testRecursionNumbers();
+    test.testRecursionString();
+    
 }
 
 void Controller :: findMaxAndMin()

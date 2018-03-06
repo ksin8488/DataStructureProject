@@ -17,6 +17,7 @@
 #include "../Model/Structures/Linear/Array.hpp"
 #include "../Testers/LinkedListTester.hpp"
 #include "../Model/Structures/Linear/List.hpp"
+#include "../Testers/RecursionTester.hpp"
 
 class Controller
 {
