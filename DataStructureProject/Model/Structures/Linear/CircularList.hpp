@@ -13,7 +13,7 @@
 #include "../../Nodes/DoubleNode.hpp"
 
 template <class Type>
-class CircularList : public List<Type>
+class CircularList : public List<Type>  //A CircularList is useful for threadpools
 {
 private:
     DoubleNode<Type> * front;

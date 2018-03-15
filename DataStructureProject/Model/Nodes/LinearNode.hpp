@@ -49,7 +49,7 @@ LinearNode<Type> :: LinearNode(Type data) : Node<Type>(data)
 }
 
 /**
- This constructor is used to creat a reference to a instance with data and a known link.
+ This constructor is used to create a reference to a instance with data and a known link.
  */
 template <class Type>
 LinearNode<Type> :: LinearNode(Type data, LinearNode<Type> * next) : Node<Type>(data)

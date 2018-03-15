@@ -48,6 +48,10 @@ void Controller :: start()
     test.testRecursionNumbers();
     test.testRecursionString();
     
+    //SortingTester
+    SortingTester sortingTest;
+    sortingTest.testSorts();
+    
 }
 
 void Controller :: findMaxAndMin()
