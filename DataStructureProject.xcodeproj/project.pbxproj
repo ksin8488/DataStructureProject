@@ -40,6 +40,7 @@
 		AC29CE81205AE95F008C58EF /* SortingTester.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = SortingTester.cpp; sourceTree = "<group>"; };
 		AC29CE82205AE95F008C58EF /* SortingTester.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = SortingTester.hpp; sourceTree = "<group>"; };
 		AC314CD22024EDBB004071A8 /* Array.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Array.hpp; sourceTree = "<group>"; };
+		AC38C5AF20603610004EB149 /* Graph.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Graph.hpp; sourceTree = "<group>"; };
 		AC467C62204DC5FB00B2FD49 /* RecursionTester.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = RecursionTester.cpp; sourceTree = "<group>"; };
 		AC467C63204DC5FB00B2FD49 /* RecursionTester.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = RecursionTester.hpp; sourceTree = "<group>"; };
 		AC7AB7EC20448F3900F45F74 /* DoubleNode.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = DoubleNode.hpp; sourceTree = "<group>"; };
@@ -127,9 +128,18 @@
 		AC314CD02024ED54004071A8 /* Structures */ = {
 			isa = PBXGroup;
 			children = (
+				AC38C5AE206035F9004EB149 /* NonLinear */,
 				AC03FE67203F49E200526C1E /* Linear */,
 			);
 			path = Structures;
+			sourceTree = "<group>";
+		};
+		AC38C5AE206035F9004EB149 /* NonLinear */ = {
+			isa = PBXGroup;
+			children = (
+				AC38C5AF20603610004EB149 /* Graph.hpp */,
+			);
+			path = NonLinear;
 			sourceTree = "<group>";
 		};
 		ACE071D42022434300951D0C = {
