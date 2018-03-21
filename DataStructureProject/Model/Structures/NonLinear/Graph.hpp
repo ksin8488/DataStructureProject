@@ -18,7 +18,7 @@ template <class Type>
 class Graph
 {
 private:
-    static const int MAXIMUM = 20;
+    static const int MAXIMUM = 50;
     bool adjacencyMatrix [MAXIMUM][MAXIMUM];        //pre-defining the data structure's size
     int weightCostMatrix [MAXIMUM][MAXIMUM];
     Type graphData[MAXIMUM];
@@ -78,6 +78,7 @@ int Graph<Type> size() const
     return vertexCount;
 }
 
+//ACCESSORS
 //Left hand side operator - uses a reference to let us talk to and affect a stored value - lets you change the reference
 template <class Type>
 Type& Graph<Type> :: operator[](int vertex) //& gives you the memory address to talk to it
@@ -94,6 +95,7 @@ Type Graph<Type> :: operator[](int vertex) const
     return graphData[vertex];
 }
 
+//VERTICES
 template <class Type>
 void Graph<Type> :: addVertex(const Type& value)
 {
@@ -110,6 +112,7 @@ void Graph<Type> :: addVertex(const Type& value)
     graphData[newVertexNumber] = value;
 }
 
+//EDGES
 template <class Type>
 void Graph<Type> :: removeEdge(int source, int target)
 {
@@ -194,9 +197,9 @@ std::set<int> Graph<Type> :: neighbors(int vertex) cosnt
     return vertexNeighbors;
 }
 
-//Traversals
+//TRAVERSALS
 template <class Type>
-void Graph<Type> :: depthFirstTraversal(Graph<Type> & currentGraph, int vertex)
+void Graph<Type> :: depthFirstTraversal(Graph<Type> & currentGraph, int vertex) //keeps going into the graph as far as it can. goes to the "depth" of the graph
 {
     bool visitedVertices[MAXIMUM];
     assert(vertex < currentGraph.size());
@@ -213,7 +216,7 @@ void Graph<Type> :: depthFirstTraversal(Graph<Type> & currentGraph, int vertex, 
     visited[vertex] = true;
     cout << currentGraph[vertex] << ", " << endl;
     
-    for(setIterator = connections.begin(); setIterator != connectionsend; setIterator++)    //recursive call and uses an Iterator to loop through the set
+    for(setIterator = connections.begin(); setIterator != connections.end(); setIterator++)    //recursive call and uses an Iterator to loop through the set. Also end refers to the spot after the last value
     {
         if(!visited[*setIterator])
         {
@@ -238,14 +241,15 @@ int Graph<Type> :: costTraversal(Graph<Type> & currentGraph, int vertex)
     vertexQueue.push(vertex);
     while(!vertexQueue.empty())
     {
-        connections = currentGraph.neighbors(vertexQueue.front());
+        int currentIndex = vertexQueue.front();
+        connections = currentGraph.neighbors(currentIndex);
         vertexQueue.pop();
         
         for(setIterator = connections.begin(); setITerator != connections.end(); setIterator++)
         {
             if(!visited[*setITerator])
             {
-                cost += weightCostMatrix[vertex][*setIterator];
+                cost += weightCostMatrix[currentIndex][*setIterator];
                 visited[*setIterator] = true;
                 vertexQueue.push(*setIterator);
             }
@@ -256,7 +260,7 @@ int Graph<Type> :: costTraversal(Graph<Type> & currentGraph, int vertex)
 }
 
 template <class Type>
-void Graph<Type> :: breadthFirstTraversal(Graph<Type> & currentGraph, int vertex)
+void Graph<Type> :: breadthFirstTraversal(Graph<Type> & currentGraph, int vertex)   //& is to get a copy of the parameter since integers don't cost much to copy but data structures do. Also breadthFirstTraversal is going "wide" rather than deep like depthFirstTraversal
 {
     assert(vertex < currentGraph.size());
     bool visited[MAXIMUM];
@@ -268,18 +272,18 @@ void Graph<Type> :: breadthFirstTraversal(Graph<Type> & currentGraph, int vertex
     visited[vertex] = true;
     cout << curentGraph[vertex] << endl;
     vertexQueue.push(vertex);
-    while(!vertaxQueue.empty())
+    while(!vertaxQueue.empty()) //loops as long as the queue is not empty
     {
-        connections = currentGraph.neighbors(vertexQueue.front());
-        vertexQueue.pop();
+        connections = currentGraph.neighbors(vertexQueue.front());  //gets the neighbors of the current vertex
+        vertexQueue.pop();  //pops the value from the Queue
         
-        for(setITerator = connections.begin(); setIterator != connections.end(); setIterator++)
+        for(setITerator = connections.begin(); setIterator != connections.end(); setIterator++) //"++" is the equivalint of the .next of a scanner
         {
-            if(!visited[*setITerator])
+            if(!visited[*setIterator])  //if you have not visited the certain vertex
             {
-                visited[*setIterator] = true;
+                visited[*setIterator] = true;   //changes the visited status to true
                 cout << currentGraph[*setIterator] << endl;
-                vertexQueue.push(*setIterator);
+                vertexQueue.push(*setIterator); //adds the certain vertex to the queue
             }
         }
     }
