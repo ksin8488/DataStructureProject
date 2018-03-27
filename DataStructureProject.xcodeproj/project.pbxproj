@@ -10,6 +10,7 @@
 		AC275CE6202A33D10092EE8E /* ArrayTester.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC275CE4202A33D10092EE8E /* ArrayTester.cpp */; };
 		AC29CE83205AE95F008C58EF /* SortingTester.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC29CE81205AE95F008C58EF /* SortingTester.cpp */; };
 		AC467C64204DC5FB00B2FD49 /* RecursionTester.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC467C62204DC5FB00B2FD49 /* RecursionTester.cpp */; };
+		AC60123D206AB80C00A83CAF /* GraphTester.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC60123B206AB80C00A83CAF /* GraphTester.cpp */; };
 		AC7AB7EF2044935800F45F74 /* TestingStacksAndQueues.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC7AB7ED2044935800F45F74 /* TestingStacksAndQueues.cpp */; };
 		AC9866822034CE8D00626AAD /* LinkedListTester.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC9866802034CE8D00626AAD /* LinkedListTester.cpp */; };
 		ACE071E9202243AE00951D0C /* Controller.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ACE071E7202243AE00951D0C /* Controller.cpp */; };
@@ -43,6 +44,8 @@
 		AC38C5AF20603610004EB149 /* Graph.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Graph.hpp; sourceTree = "<group>"; };
 		AC467C62204DC5FB00B2FD49 /* RecursionTester.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = RecursionTester.cpp; sourceTree = "<group>"; };
 		AC467C63204DC5FB00B2FD49 /* RecursionTester.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = RecursionTester.hpp; sourceTree = "<group>"; };
+		AC60123B206AB80C00A83CAF /* GraphTester.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = GraphTester.cpp; sourceTree = "<group>"; };
+		AC60123C206AB80C00A83CAF /* GraphTester.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = GraphTester.hpp; sourceTree = "<group>"; };
 		AC7AB7EC20448F3900F45F74 /* DoubleNode.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = DoubleNode.hpp; sourceTree = "<group>"; };
 		AC7AB7ED2044935800F45F74 /* TestingStacksAndQueues.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = TestingStacksAndQueues.cpp; sourceTree = "<group>"; };
 		AC7AB7EE2044935800F45F74 /* TestingStacksAndQueues.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = TestingStacksAndQueues.hpp; sourceTree = "<group>"; };
@@ -102,6 +105,8 @@
 				AC467C63204DC5FB00B2FD49 /* RecursionTester.hpp */,
 				AC29CE81205AE95F008C58EF /* SortingTester.cpp */,
 				AC29CE82205AE95F008C58EF /* SortingTester.hpp */,
+				AC60123B206AB80C00A83CAF /* GraphTester.cpp */,
+				AC60123C206AB80C00A83CAF /* GraphTester.hpp */,
 			);
 			path = Testers;
 			sourceTree = "<group>";
@@ -263,6 +268,7 @@
 				ACE071FE2022512100951D0C /* CrimeData.cpp in Sources */,
 				ACE071EC202243DB00951D0C /* Runner.cpp in Sources */,
 				ACE071E9202243AE00951D0C /* Controller.cpp in Sources */,
+				AC60123D206AB80C00A83CAF /* GraphTester.cpp in Sources */,
 				AC29CE83205AE95F008C58EF /* SortingTester.cpp in Sources */,
 				AC9866822034CE8D00626AAD /* LinkedListTester.cpp in Sources */,
 				AC7AB7EF2044935800F45F74 /* TestingStacksAndQueues.cpp in Sources */,

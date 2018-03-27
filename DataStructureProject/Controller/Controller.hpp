@@ -19,6 +19,7 @@
 #include "../Model/Structures/Linear/List.hpp"
 #include "../Testers/RecursionTester.hpp"
 #include "../Testers/SortingTester.hpp"
+#include "../Testers/GraphTester.hpp"
 
 class Controller
 {

@@ -23,12 +23,12 @@ private:
     int weightCostMatrix [MAXIMUM][MAXIMUM];
     Type graphData[MAXIMUM];
     int vertexCount;
-    void depthFirstTraversal(Graph<Type> & graph, int vertex, bool markedVertices[])        //Recursive helper method w/ 3 parameters
+    void depthFirstTraversal(Graph<Type> & graph, int vertex, bool markedVertices[]);       //Recursive helper method w/ 3 parameters
 public:
-    Graph()     //constructor
+    Graph();     //constructor
     //Graph operations
     
-    void addVertex(const Type& value)   //builds the vertexes
+    void addVertex(const Type& value);   //builds the vertexes
     
     //Conenct vertices
     void addEdge(int source, int target);                    //makes a one-way connection from source to target
@@ -59,10 +59,10 @@ public:
 template <class Type>
 const int Graph<Type> :: MAXIMUM;   //constant so that it can be seen by the program
 
-templace <class Type>
+template <class Type>
 Graph<Type> :: Graph()
 {
-    this->vertexCount = 0
+    this->vertexCount = 0;
 }
 
 /*
@@ -73,7 +73,7 @@ Graph<Type> :: Graph()
  */
 
 template <class Type>
-int Graph<Type> size() const
+int Graph<Type> :: size() const
 {
     return vertexCount;
 }
@@ -116,7 +116,7 @@ void Graph<Type> :: addVertex(const Type& value)
 template <class Type>
 void Graph<Type> :: removeEdge(int source, int target)
 {
-    assert(source >= 0 && source < vertexCount && target >= 0 target < vertexCount);
+    assert(source >= 0 && source < vertexCount && target >= 0 && target < vertexCount);
     adjacencyMatrix[source][target];
 }
 
@@ -137,7 +137,7 @@ void Graph<Type> :: removeEdgeCost(int source, int target)
 }
 
 template <class Type>
-void Graph<Type> :: adEdge(int source, int target)
+void Graph<Type> :: addEdge(int source, int target)
 {
     assert(source >= 0 && source < vertexCount && target >= 0 && target < vertexCount);
     adjacencyMatrix[source][target] = true;
@@ -160,9 +160,9 @@ void Graph<Type> :: addEdgeUndirected(int source, int target)
 }
 
 template <class Type>
-bool Graph<Type> :: hasUndirectedConnection(int source, int target) cosnt
+bool Graph<Type> :: hasUndirectedConnection(int source, int target) const
 {
-    assert(source >= 0 && source < vertexCount && target >= 0 && target < vertexCount)
+    assert(source >= 0 && source < vertexCount && target >= 0 && target < vertexCount);
     
     bool isAnEdge = false;
     isAnEdge = adjacencyMatrix[source][target] || adjacencyMatrix[target][source];
@@ -170,7 +170,7 @@ bool Graph<Type> :: hasUndirectedConnection(int source, int target) cosnt
     return isAnEdge;
 }
 
-template <class type>
+template <class Type>
 bool Graph<Type> :: areConnected(int source, int target) const
 {
     assert(source >= 0 && source < vertexCount && target >= 0 && target < vertexCount);
@@ -181,8 +181,8 @@ bool Graph<Type> :: areConnected(int source, int target) const
     return isAnEdge;
 }
 
-template <class type>
-std::set<int> Graph<Type> :: neighbors(int vertex) cosnt
+template <class Type>
+std::set<int> Graph<Type> :: neighbors(int vertex) const
 {
     assert(vertex < vertexCount);
     std::set<int> vertexNeighbors;
@@ -232,7 +232,7 @@ int Graph<Type> :: costTraversal(Graph<Type> & currentGraph, int vertex)
     int cost = 0;
     bool visited[MAXIMUM];
     std::set<int> connections;
-    std::set<int::iterator setIterator;
+    std::set<int>::iterator setIterator;
     std::queue<int> vertexQueue;
     
     std::fill_n(visited, currentGraph.size(), false);   //fill_n pre-populates the array with a given value
@@ -245,9 +245,9 @@ int Graph<Type> :: costTraversal(Graph<Type> & currentGraph, int vertex)
         connections = currentGraph.neighbors(currentIndex);
         vertexQueue.pop();
         
-        for(setIterator = connections.begin(); setITerator != connections.end(); setIterator++)
+        for(setIterator = connections.begin(); setIterator != connections.end(); setIterator++)
         {
-            if(!visited[*setITerator])
+            if(!visited[*setIterator])
             {
                 cost += weightCostMatrix[currentIndex][*setIterator];
                 visited[*setIterator] = true;
@@ -256,7 +256,7 @@ int Graph<Type> :: costTraversal(Graph<Type> & currentGraph, int vertex)
         }
     }
     
-    return cost
+    return cost;
 }
 
 template <class Type>
@@ -270,14 +270,14 @@ void Graph<Type> :: breadthFirstTraversal(Graph<Type> & currentGraph, int vertex
     
     std::fill_n(visited, currentGraph.size(), false);
     visited[vertex] = true;
-    cout << curentGraph[vertex] << endl;
+    cout << currentGraph[vertex] << endl;
     vertexQueue.push(vertex);
-    while(!vertaxQueue.empty()) //loops as long as the queue is not empty
+    while(!vertexQueue.empty()) //loops as long as the queue is not empty
     {
         connections = currentGraph.neighbors(vertexQueue.front());  //gets the neighbors of the current vertex
         vertexQueue.pop();  //pops the value from the Queue
         
-        for(setITerator = connections.begin(); setIterator != connections.end(); setIterator++) //"++" is the equivalint of the .next of a scanner
+        for(setIterator = connections.begin(); setIterator != connections.end(); setIterator++) //"++" is the equivalint of the .next of a scanner
         {
             if(!visited[*setIterator])  //if you have not visited the certain vertex
             {

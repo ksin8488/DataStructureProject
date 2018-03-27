@@ -52,6 +52,9 @@ void Controller :: start()
     SortingTester sortingTest;
     sortingTest.testSorts();
     
+    //GraphTester
+    GraphTester graphingTest;
+    graphingTest.testGraphs();
 }
 
 void Controller :: findMaxAndMin()
