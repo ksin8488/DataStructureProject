@@ -13,12 +13,12 @@
 BinaryTreeNode&lt;Type&gt;
 --
 
--root : BinaryTreeNode&lt;Type&gt; *
--left : BinaryTreeNode&lt;Type&gt; *
--right : BinaryTreeNode&lt;Type&gt; *
+- root : BinaryTreeNode&lt;Type&gt; *
+- left : BinaryTreeNode&lt;Type&gt; *
+- right : BinaryTreeNode&lt;Type&gt; *
 
 --
-+BinaryTreeNode() : constructor
++ BinaryTreeNode() : constructor
 + BinaryTreeNode(Type data) : constructor
 
 + getRoot() : BinaryTreeNode&lt;Type&gt; *
@@ -27,7 +27,7 @@ BinaryTreeNode&lt;Type&gt;
 
 + setRootNode(BinaryTreeNode&lt;Type&gt; *) : void
 + setLeftNode(BinaryTreeNode&lt;Type&gt; *) : void
-+ setRigghtNode(BinaryTreeNode&lt;Type&gt; *) : void</panel_attributes>
++ setRightNode(BinaryTreeNode&lt;Type&gt; *) : void</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -42,13 +42,13 @@ BinaryTreeNode&lt;Type&gt;
 Node&lt;Type&gt;
 --
 
-#data : Type
+# data : Type
 
 --
-+Node() : constructor
-+Node(Type data) : constructor
-+getData() : Type
-+setData(Type data) : void</panel_attributes>
++ Node() : constructor
++ Node(Type data) : constructor
++ getData() : Type
++ setData(Type data) : void</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
