@@ -9,7 +9,7 @@
 #ifndef BinaryTreeNode_h
 #define BinaryTreeNode_h
 
-#include "Nodes.hpp"
+#include "Node.hpp"
 
 template <class Type>
 class BinaryTreeNode : public Node<Type>        //going to be used to sort the CrimeData
@@ -33,7 +33,7 @@ public:
 };
 
 template <class Type>
-BinaryTreeMode<Type> :: BinaryTreeNode() : Node<Type()
+BinaryTreeNode<Type> :: BinaryTreeNode() : Node<Type>()
 {
     root = nullptr;
     left = nullptr;
@@ -60,8 +60,8 @@ BinaryTreeNode<Type> * BinaryTreeNode<Type> :: getRightNode()
     return this->right;
 }
 
-template <class type>
-BinaryTreeNode<Type> * BinartyTreeNode<Type> :: getLeftNode()
+template <class Type>
+BinaryTreeNode<Type> * BinaryTreeNode<Type> :: getLeftNode()
 {
     return this->left;
 }

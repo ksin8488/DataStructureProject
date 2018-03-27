@@ -10,6 +10,7 @@
       <h>290</h>
     </coordinates>
     <panel_attributes>bg=magenta
+transparency=0
 BinaryTreeNode&lt;Type&gt;
 --
 
@@ -39,6 +40,7 @@ BinaryTreeNode&lt;Type&gt;
       <h>160</h>
     </coordinates>
     <panel_attributes>bg=green
+transparency=0
 Node&lt;Type&gt;
 --
 
@@ -62,5 +64,39 @@ Node&lt;Type&gt;
     <panel_attributes>lt=&lt;&lt;&lt;-
 Extends</panel_attributes>
     <additional_attributes>10.0;20.0;130.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>130</x>
+      <y>310</y>
+      <w>290</w>
+      <h>360</h>
+    </coordinates>
+    <panel_attributes>bg=pink
+transparency=0
+/Tree&lt;Type&gt;/
+--
+
+# root : BinaryTreeNode&lt;Type&gt;
+
+--
+*Informational Methods*
+/+ getSize() : int/
+/+ getHeight() : int/
+/+ isComplete() : bool/
+/+ isBalenced() : bool/
+
+*Data Methods*
+/+ insert(Type) : void/
+/+ contains(Type) : bool/
+/+ remove(Type) : void/
+
+*Traversals*
+/+ inOrderTraversal() : void/
+/+ preOrderTraversal() : void/
+/+ postOrderTraversal() : void/
+</panel_attributes>
+    <additional_attributes/>
   </element>
 </diagram>
