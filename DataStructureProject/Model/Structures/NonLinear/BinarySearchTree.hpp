@@ -59,7 +59,7 @@ public:
 };
 
 template <class Type>
-int BinarySearchTree<Type> :: calculateSize(BinaryTreeNode<Type> * startNode)
+int BinarySearchTree<Type> :: calculateSize(BinaryTreeNode<Type> * startNode)   //type, template class, scope resolution, method title, parameters
 {
     return -1;
 }
@@ -80,12 +80,6 @@ template <class Type>
 bool BinarySearchTree<Type> :: isComplete(BinaryTreeNode<Type> * startNode, int index, int size)
 {
     return false;
-}
-
-template <class Type>
-void BinarySearchTree<Type> :: inOrderTraversal(BinaryTreeNode<Type> * inStart)
-{
-    
 }
 
 template <class Type>
@@ -148,16 +142,54 @@ void BinarySearchTree<Type> :: inOrderTraversal()
     inOrderTraversal(this->root);
 }
 
+/*
+ In order traversal goes in the order Left, Root, Right
+ Notice that the non-recursive case does NOTHING
+ */
+template <class Type>
+void BinarySearchTree<Type> :: inOrderTraversal(BinaryTreeNode<Type> * inStart)
+{
+    if(inStart != nullptr)
+    {
+        inOrderTraversal(inStart->getLeftNode());
+        cout << inStart->getData() << endl;
+        inOrderTraversal(inStart->getRightNode());
+    }
+}
+
+template <class Type>
+void BinarySearchTree<Type> :: demo()
+{
+    demoTraversalSteps(this->root);
+}
+
+template <class Type>
+void BinarySearchTree<Type> :: demoTraversalSteps(BinaryTreeNode<Type> * start)
+{
+    if(start != nullptr)
+    {
+        cout << "check if left is here" << endl;
+        demoTraversalSteps(start->getLeftNode());
+        cout << "return to root" << endl;
+        cout << "check if right is here" << endl;
+        demoTraversalSteps(start->getRightNode());
+    }
+    else
+    {
+        cout << "reached nullptr - if on right its back up the recursive call stack" << endl;
+    }
+}
+
 template <class Type>
 void BinarySearchTree<Type> :: preOrderTraversal()
 {
-    
+    preOrderTraversal(this->root);  //method name, parameter, this, selector, root;
 }
 
 template <class Type>
 void BinarySearchTree<Type> :: postOrderTraversal()
 {
-    
+    postOrderTraversal(this->root);
 }
 
 template <class Type>
@@ -252,43 +284,6 @@ Type BinarySearchTree<Type> :: findMaximum()
     
 }
 
-/*
- In order traversal goes in the order Left, Root, Right
- Notice that the non-recursive case does NOTHING
- */
-template <class Type>
-void BinarySearchTree<Type> :: inOrderTraversal(BinaryTreeNode<Type> * inStart)
-{
-    if(inStart != nullptr)
-    {
-        inOrderTraversal(inStart->getLeftNode());
-        cout << inStart->getData() << endl;
-        inOrderTraversal(inStart->getRightNode());
-    }
-}
-
-template <class Type>
-void BinarySearchTree<Type> :: demo();
-{
-    demoTraversalSteps(this->root);
-}
-
-template <class Type>
-void BinarySearchTree<Type> :: demoTraversalSteps(BinaryTreeNode<Type> * start)
-{
-    if(start != nullptr)
-    {
-        cout << "check if left is here" << endl;
-        demoTraversalSteps(start->getLeftNode());
-        cout << "return to root" << endl;
-        cout << "check if right is here" << endl;
-        demoTraversalSteps(start->getRightNode());
-    }
-    else
-    {
-        cout << "reached nullptr - if on right its back up the recursive call stack" << endl;
-    }
-}
 
 
 #endif /* BinarySearchTree_h */
