@@ -31,4 +31,29 @@ public:
     virtual void postOrderTraversal() = 0;
 };
 
+template <class Type>
+BinaryTreeNode<Type> * root()
+{
+    
+}
+
+template <class Type>
+virtual int getSize()
+{
+    
+}
+
+template <class Type>
+
+template <class Type>
+
+template <class Type>
+
+template <class Type>
+
+template <class Type>
+
+template <class Type>
+
+template <class Type>
 #endif /* Tree_h */

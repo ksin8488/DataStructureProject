@@ -107,5 +107,5 @@ void GraphTester :: setup()
 
 void GraphTester :: compareTraversals()
 {
-    
+    cout<<"Text untill I figure out what to do";
 }
