@@ -8,11 +8,6 @@
 
 #include "BinaryTreeTester.hpp"
 
-BinaryTreeNode<int> testNode()
-{
-    
-}
-
 void  BinaryTreeTester :: doTreeStuff()
 {
     testTree.insert(3);
@@ -29,7 +24,7 @@ void  BinaryTreeTester :: doTreeStuff()
     testTree.insert(10);
     testTree.insert(600);
     
-    testTree.demo();
+  //  testTree.demo();
     testTree.inOrderTraversal();
     testTree.preOrderTraversal();
     testTree.postOrderTraversal();

@@ -115,7 +115,13 @@ bool BinarySearchTree<Type> :: isComplete(BinaryTreeNode<Type> * startNode, int 
         return false;
     }
     
-    return (isComplete(startNode->etLeftNode(), 2 * index +1, size) && isComplete(startNode->getRightNode(), 2* index + 2, size));
+    return (isComplete(startNode->getLeftNode(), 2 * index +1, size) && isComplete(startNode->getRightNode(), 2 * index + 2, size));
+}
+
+template <class Type>
+bool BinarySearchTree<Type> :: isBalanced()
+{
+    return isBalanced(this->root);
 }
 
 template <class Type>
@@ -130,11 +136,11 @@ bool BinarySearchTree<Type> :: isBalanced(BinaryTreeNode<Type> * current)
     }
     
     leftHeight = calculateHeight(current->getLeftNode());
-    rightHeight = calculateHight(current->getRight());
+    rightHeight = calculateHeight(current->getRightNode());
     
     int heightDifference = abs(leftHeight - rightHeight);
     bool leftBalanced = isBalanced(current->getLeftNode());
-    bool rightBalanced = isBalenced(current->getRightNode());
+    bool rightBalanced = isBalanced(current->getRightNode());
     
     if(heightDifference <= 1 && leftBalanced && rightBalanced)
     {
@@ -184,7 +190,7 @@ void BinarySearchTree<Type> :: preOrderTraversal(BinaryTreeNode<Type> * currentN
     {
         cout << currentNode->getData() << endl;
         preOrderTraversal(currentNode->getLeftNode());
-        preOrderTraversal(currentNode->getRightNoe());
+        preOrderTraversal(currentNode->getRightNode());
     }
 }
 
@@ -289,14 +295,14 @@ void BinarySearchTree<Type> :: remove(Type item)
 template <class Type>
 BinaryTreeNode<Type> * getRightMostChild(BinaryTreeNode<Type> * current)
 {
-    
+    return -1;
 }
 
 
 template <class Type>
 BinaryTreeNode<Type> * getLeftMostChild(BinaryTreeNode<Type> * current)
 {
-    
+    return -1;
 }
 
 template <class Type>
@@ -308,19 +314,19 @@ void BinarySearchTree<Type> :: removeNode(BinaryTreeNode<Type> * removeMe)
 template <class Type>
 BinarySearchTree<Type> :: BinarySearchTree()
 {
-    
+
 }
 
 template <class Type>
 BinarySearchTree<Type> :: ~BinarySearchTree()
 {
-    
+
 }
 
 template <class Type>
 BinaryTreeNode<Type> * getRoot()
 {
-    
+    return -1;
 }
 
 template <class Type>

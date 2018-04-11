@@ -20,6 +20,7 @@
 #include "../Testers/RecursionTester.hpp"
 #include "../Testers/SortingTester.hpp"
 #include "../Testers/GraphTester.hpp"
+#include "../Testers/BinaryTreeTester.hpp"
 
 class Controller
 {

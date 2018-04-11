@@ -109,3 +109,8 @@ void GraphTester :: compareTraversals()
 {
     cout<<"Text untill I figure out what to do";
 }
+
+void GraphTester :: testGraphs()
+{
+    cout << "Placeholder untill I know what I'm doing with my life.";
+}
