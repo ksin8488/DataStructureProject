@@ -34,6 +34,8 @@ protected:
     void demoTraversalSteps(BinaryTreeNode<Type> * start);
     void demo();
     
+    void destroyTree(BinaryTreeNode<Type> * node);
+    
 public:
     BinarySearchTree();
     ~BinarySearchTree();
@@ -419,7 +421,7 @@ void BinarySearchTree<Type> :: removeNode(BinaryTreeNode<Type> * removeMe)
         current = getRightMostChild(removeMe->getLeftNode());
         
         previous = current->getRootNode();
-        removeMe->setData(current->gatData());
+        removeMe->setData(current->getData());
         
         if(previous == nullptr) //removing from the root
         {
@@ -483,9 +485,22 @@ Type BinarySearchTree<Type> :: findMinimum()
     return getLeftMostChild(this->root)->getData();
 }
 
+template <class Type>
+BinarySearchTree<Type> :: ~BinarySearchTree()
+{
+    destroyTree(this->root);
+}
 
-
-
+template <class Type>
+void BinarySearchTree<Type> :: destroyTree(BinaryTreeNode<Type> * node)
+{
+    if(node != nullptr)
+    {
+        destroyTree(node->getLeftNode());
+        destroyTree(node->getRightNode());
+        delete node;
+    }
+}
 
 
 
@@ -501,12 +516,6 @@ Type BinarySearchTree<Type> :: findMinimum()
 
 template <class Type>
 BinarySearchTree<Type> :: BinarySearchTree()
-{
-
-}
-
-template <class Type>
-BinarySearchTree<Type> :: ~BinarySearchTree()
 {
 
 }
