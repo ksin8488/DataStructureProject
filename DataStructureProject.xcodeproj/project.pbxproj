@@ -19,6 +19,7 @@
 		ACE071F1202246C900951D0C /* Timer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ACE071EF202246C900951D0C /* Timer.cpp */; };
 		ACE071F420224D5A00951D0C /* FileController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ACE071F220224D5A00951D0C /* FileController.cpp */; };
 		ACE071FE2022512100951D0C /* CrimeData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ACE071FC2022512100951D0C /* CrimeData.cpp */; };
+		ACF7758220866DCA0024A903 /* AVLTreeTester.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ACF7758020866DCA0024A903 /* AVLTreeTester.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -73,6 +74,8 @@
 		ACE071FC2022512100951D0C /* CrimeData.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CrimeData.cpp; sourceTree = "<group>"; };
 		ACE071FD2022512100951D0C /* crime.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = crime.csv; sourceTree = "<group>"; };
 		ACF7757F20866B490024A903 /* AVLTree.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = AVLTree.hpp; sourceTree = "<group>"; };
+		ACF7758020866DCA0024A903 /* AVLTreeTester.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = AVLTreeTester.cpp; sourceTree = "<group>"; };
+		ACF7758120866DCA0024A903 /* AVLTreeTester.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = AVLTreeTester.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +119,8 @@
 				AC60123C206AB80C00A83CAF /* GraphTester.hpp */,
 				AC601240206ACA1700A83CAF /* BinaryTreeTester.cpp */,
 				AC601241206ACA1700A83CAF /* BinaryTreeTester.hpp */,
+				ACF7758020866DCA0024A903 /* AVLTreeTester.cpp */,
+				ACF7758120866DCA0024A903 /* AVLTreeTester.hpp */,
 			);
 			path = Testers;
 			sourceTree = "<group>";
@@ -285,6 +290,7 @@
 				AC60123D206AB80C00A83CAF /* GraphTester.cpp in Sources */,
 				AC29CE83205AE95F008C58EF /* SortingTester.cpp in Sources */,
 				AC9866822034CE8D00626AAD /* LinkedListTester.cpp in Sources */,
+				ACF7758220866DCA0024A903 /* AVLTreeTester.cpp in Sources */,
 				AC7AB7EF2044935800F45F74 /* TestingStacksAndQueues.cpp in Sources */,
 				AC275CE6202A33D10092EE8E /* ArrayTester.cpp in Sources */,
 				ACE071F420224D5A00951D0C /* FileController.cpp in Sources */,
