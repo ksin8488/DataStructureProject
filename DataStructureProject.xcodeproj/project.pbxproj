@@ -46,6 +46,7 @@
 		AC38C5AF20603610004EB149 /* Graph.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Graph.hpp; sourceTree = "<group>"; };
 		AC467C62204DC5FB00B2FD49 /* RecursionTester.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = RecursionTester.cpp; sourceTree = "<group>"; };
 		AC467C63204DC5FB00B2FD49 /* RecursionTester.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = RecursionTester.hpp; sourceTree = "<group>"; };
+		AC4D708420939F900022A5E0 /* HashNode.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = HashNode.hpp; sourceTree = "<group>"; };
 		AC60123B206AB80C00A83CAF /* GraphTester.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = GraphTester.cpp; sourceTree = "<group>"; };
 		AC60123C206AB80C00A83CAF /* GraphTester.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = GraphTester.hpp; sourceTree = "<group>"; };
 		AC60123F206AC0D300A83CAF /* BinaryTreeNode.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = BinaryTreeNode.hpp; sourceTree = "<group>"; };
@@ -134,6 +135,7 @@
 				ACBCD701202CE586003535B4 /* LinearNode.hpp */,
 				AC7AB7EC20448F3900F45F74 /* DoubleNode.hpp */,
 				ACD09D03208E50F4006BB037 /* N_AryTreeNode.hpp */,
+				AC4D708420939F900022A5E0 /* HashNode.hpp */,
 			);
 			path = Nodes;
 			sourceTree = "<group>";
