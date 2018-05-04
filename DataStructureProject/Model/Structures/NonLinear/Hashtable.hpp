@@ -24,7 +24,7 @@ private:
     bool isPrime(long current);
     void resize();
     long findPosition(HashNode<Type> * insertedNode);
-    long handleCollision(HashNode<Type>* insertedNode, long index);
+    long handleCollision(long index);
     
 public:
     Hashtable();
@@ -58,19 +58,96 @@ bool Hashtable<Type> :: isPrime(long current)
 template <class Type>
 long Hashtable<Type> :: findPosition(HashNode<type> * insert)
 {
-    return -1;
+    long insertPosition = insert->getKey() % this->capacity;
+    return insertPosition;
 }
 
 template <class Type>
-long Hashtable<Type> :: handleCollision(HashNode<Type> * current, long index)
+long Hashtable<Type> :: handleCollision(long currentPosition)
 {
+    long shift = 17;
+    
+    for(long position = currentPosition + shift; position != currentPosition; position += shift)
+    {
+        if(position >= capacity)
+        {
+            position = position % capactiy;
+        }
+        
+        if(internalStorage[position] == nullptr)
+        {
+            return position;
+        }
+    }
+    
     return -1;
 }
 
 template <class Type>
 long Hashtable<Type> :: getSize()
 {
-    return -1;
+    return this->size;
+}
+
+template <class Type>
+void Hashtable<Type> :: resize()
+{
+    long updatedCapacity = getNextPrime();
+    HashNode<Type> * * tempStorage = new HashNode<Type> * [updatedCapacity];
+    
+    std :: fill_n(tempStorage, updatedCapacity, nullptr);
+    
+    long oldCapacity = this->capacity;
+    this->capacity = updatedCapacity;
+    
+    for(long index = 0; index < oldCapacity; index++)
+    {
+        if(internalStorage[index] != nullptr)
+        {
+            hashNode<Type> temp = internalStorage[index];
+            
+            long position = findPosition(temp);
+            if(tempStorage[position] == nullptr)
+            {
+                tempStorage[position] = temp;
+            }
+            else
+            {
+                long updatePosition = handleCollision(position);
+                if(updatedPosition != -1)
+                {
+                    tempStorage[updatedPosition] = temp;
+                }
+            }
+        }
+    }
+    internalStoragge = tempStorage;
+}
+
+template <class Type>
+void Hashtable<Type> :: insert(Type value)
+{
+    this->size++;
+    if(((this->size * 1.000) / this->capacity) > this->loadFactor)
+    {
+        resize();
+    }
+    
+    HashNode<Type> * temp = new HashNode<Type>(value);
+    long index = findPosition(temp);
+    
+    if(internalStorage[index] == nullptr)
+    {
+        internalStorage[index] = temp;
+    }
+    else
+    {
+        long updatedPosition = handleCollision(index);
+        if(updatedPosition != -1)
+        {
+            internal[updatedPosition] = temp;
+        }
+    }
 }
 
 template <class Type>
@@ -79,16 +156,5 @@ long Hashtable<Type> :: getNextPrime()  //retrieves the next prime number
     return -1;
 }
 
-template <class Type>
-void Hashtable<Type> :: resize()
-{
-    
-}
-
-template <class Type>
-void Hashtable<Type> :: insert(Type value)
-{
-    
-}
 
 #endif /* Hashtable_h */
