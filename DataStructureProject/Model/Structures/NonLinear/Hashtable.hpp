@@ -10,6 +10,8 @@
 #define Hashtable_h
 
 #include "../Nodes/HashNode.hpp"
+#include <cmath>
+#include <assert.h>
 
 template <class Type>
 class Hashtable
@@ -32,6 +34,8 @@ public:
     
     void insert(Type data);
     long getSize();
+    HashNode<Type> * get(long index);
+    bool contains(HashNode<Type> * value);
 };
 
 template <class Type>
@@ -52,7 +56,29 @@ Hashtable<Type> :: ~Hashtable()
 template <class Type>
 bool Hashtable<Type> :: isPrime(long current)
 {
-    return false;
+    if(current <= 1)
+    {
+        return false;
+    }
+    else if(current == 2 || current == 3)
+    {
+        return true;
+    }
+    else if(current % 2 == 0)
+    {
+        return false;
+    }
+    else
+    {
+        for(int next = 3; next <= sqrt(current) + 1; next += 2)
+        {
+            if(curren % next == 0)
+            {
+                return false;
+            }
+        }
+    }
+    return true;
 }
 
 template <class Type>
@@ -153,8 +179,38 @@ void Hashtable<Type> :: insert(Type value)
 template <class Type>
 long Hashtable<Type> :: getNextPrime()  //retrieves the next prime number
 {
-    return -1;
+    long nextPrime = (this->capacity * 2) + 1;
+    
+    while(!isPrime(nextPrime))
+    {
+        nextPrime += 2;
+    }
+    
+    return nextPrime;
 }
 
+template <class Type>
+HashNode<Type> * Hashtable<Type> :: get(long index) //takes the object index and either return's nullptr or what is stored
+{
+    assert(index < capactiy);
+    return internalStorage[index];
+}
+
+template <class Type>
+bool Hashtable<Type> :: contains(HashNode<Type> * value)
+{
+    if(internalStorage[findPosition(value)]->getData() == value->getData())
+    {
+        return true;
+    }
+    
+    long other = handleCollision(findPosition(value));
+    if(internalStorage[other]->getData() == value->getData())
+    {
+        return true;
+    }
+    
+    return false;
+}
 
 #endif /* Hashtable_h */
