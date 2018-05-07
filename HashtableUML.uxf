@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.2">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>830</x>
+      <y>190</y>
+      <w>400</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>HashNode&lt;Type&gt;
+--
+- key : long
+
+--
+
++ HashNode()
++ HashNode(Type data) : constructor
++ getKey() const : long
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>910</x>
+      <y>420</y>
+      <w>230</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>Node&lt;Type&gt;
+--
+#data : Type
+
+--
++ Node : constructor
++ Node(Type data) : constructor
++ getData() : Type
++ setData(Type Data) : void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1010</x>
+      <y>320</y>
+      <w>30</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;100.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>350</x>
+      <y>170</y>
+      <w>400</w>
+      <h>350</h>
+    </coordinates>
+    <panel_attributes>Hashtable&lt;Type&gt;
+--
+-internalStorage : HashNode&lt;Type&gt;**
+-size : long
+-capacity : long
+-loadFactor : double
+
+-getNextPrime() : long
+-isNextPrime(long current) : bool
+-resize() : void
+-findPosition(HashNode&lt;Type&gt; * insertedNode) : long
+-handleCollision(long index) : long
+
+--
++Hashtable()
++~Hashtable()
+
++insert(Type data) : void
++getSize() : long
++get(long index) : HashNode&lt;Type&gt; *
++contains(HashNode&lt;Type&gt; * value) : bool
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>740</x>
+      <y>250</y>
+      <w>110</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;90.0;10.0</additional_attributes>
+  </element>
+</diagram>

@@ -19,7 +19,7 @@ public:
     HashNode();
     HashNode(Type data);
     
-    long geetKey() const;   //const makes it so that you cannot change the type or value. It is a constant
+    long getKey() const;   //const makes it so that you cannot change the type or value. It is a constant
 };
 
 template <class Type>
