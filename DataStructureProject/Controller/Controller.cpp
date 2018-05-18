@@ -52,9 +52,11 @@ void Controller :: start()
     SortingTester sortingTest;
     sortingTest.testSorts();
     
-//    //GraphTester
-//    GraphTester graphingTest;
-//    graphingTest.testGraphs();
+    //GraphTester
+    GraphTester graphingTest;
+    graphingTest.testGraphs();
+//    graphingTest.setup();
+//    graphingTest.compareTraversals();
     
     //BinaryTreeTester
     BinaryTreeTester binaryTreeTest;

@@ -12,12 +12,12 @@
     <panel_attributes>Linear Node&lt;Type&gt;
 --
 
--LinearNode&lt;Type&gt; * : next
+- LinearNode&lt;Type&gt; * : next
 
 --
-+ LinearNode() : constructor/
-+LinearNode(Type data) : constructor/
-+LinearNode(Type data, LinearNode&lt;Type&gt; * next) : constructor/
+/+ LinearNode() : constructor/
+/+ LinearNode(Type data) : constructor/
+/+ LinearNode(Type data, LinearNode&lt;Type&gt; * next) : constructor/
 
 + setNextNode(LinearNode&lt;Type&gt; *) : void
 + getNextNode() : LinearNode&lt;Type&gt; *</panel_attributes>
@@ -33,13 +33,13 @@
     </coordinates>
     <panel_attributes>Node&lt;Type&gt;
 --
-#data : Type
+# data : Type
 
 --
-+Node() : constructor
-+Node(Type data) : constructor
-+getData() : Type
-+setData(Type data) : void</panel_attributes>
++ Node() : constructor
++ Node(Type data) : constructor
++ getData() : Type
++ setData(Type data) : void</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -98,18 +98,18 @@ Methods/Constructors</panel_attributes>
     <panel_attributes>List&lt;Type&gt;
 --
 
-#size : int
+# size : int
 
 --
 
-/+add(Type item) : void/
-/+addAtIndex(int index, Type item) : void/
-/+remove(Type item) : Type/
-/+getFromIndex(int index) : Type/
+/+ add(Type item) : void/
+/+ addAtIndex(int index, Type item) : void/
+/+ remove(Type item) : Type/
+/+ getFromIndex(int index) : Type/
 
-/+getSize() const : int/
-/+getFront() : LinearNode&lt;Type&gt;*/
-/+getEnd() : LinearNode&lt;Type&gt;*/
+/+ getSize() const : int/
+/+ getFront() : LinearNode&lt;Type&gt;*/
+/+ getEnd() : LinearNode&lt;Type&gt;*/
 </panel_attributes>
     <additional_attributes/>
   </element>

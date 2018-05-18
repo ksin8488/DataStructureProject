@@ -50,7 +50,7 @@ Array<Type> :: Array(int size)
 }
 
 template <class Type>
-Array<Type> :: Array(const Array<Type> & toCopy)    //Makes a copy of an array - const is used so you can't "hurt it" but still get the data
+Array<Type> :: Array(const Array<Type> & toCopy)    //Makes a copy of an array - const is used so you can't "hurt it" (accidentally change or destroy data) but still get the data
 {
     this->size = toCopy.getSize();      //new pointer made to get the size with no assert needed due to previous check
     

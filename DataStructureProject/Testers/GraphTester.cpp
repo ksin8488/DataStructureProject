@@ -107,10 +107,30 @@ void GraphTester :: setup()
 
 void GraphTester :: compareTraversals()
 {
-    cout<<"Text untill I figure out what to do";
+    for(int i = 0; i < puzzle.size(); i++)
+    {
+        puzzle.depthFirstTraversal(puzzle, i);
+    }
+    
+    for(int i = 0; i < puzzle.size(); i++)
+    {
+        puzzle.breadthFirstTraversal(puzzle, i);
+    }
+}
+
+void GraphTester :: findCheapestTraversal()
+{
+    for(int i = 0; i < puzzle.size(); i++)
+    {
+        puzzle.costTraversal(puzzle, i);
+    }
 }
 
 void GraphTester :: testGraphs()
 {
-    cout << "Placeholder untill I know what I'm doing with my life.";
+    setup();
+    
+    compareTraversals();
+    
+    findCheapestTraversal();
 }
